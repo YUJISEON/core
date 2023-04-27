@@ -120,7 +120,7 @@ function mapInit() {
 
     map1 = new kakao.maps.Map(mapContainer1, mapOption1); // 지도를 생성합니다
 
-    var imageSrc1 = '../img/map_marker.png', // 마커이미지의 주소입니다    
+    var imageSrc1 = '/img/map_marker.png', // 마커이미지의 주소입니다    
     imageSize1 = new kakao.maps.Size(200, 80), // 마커이미지의 크기입니다
     imageOption1 = {offset: new kakao.maps.Point(0,80)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
@@ -146,7 +146,7 @@ function mapInit() {
 
     map2 = new kakao.maps.Map(mapContainer2, mapOption2); // 지도를 생성합니다
 
-    var imageSrc2 = '../img/map_marker.png', // 마커이미지의 주소입니다    
+    var imageSrc2 = '/img/map_marker.png', // 마커이미지의 주소입니다    
     imageSize2 = new kakao.maps.Size(200, 80), // 마커이미지의 크기입니다
     imageOption2 = {offset: new kakao.maps.Point(20,105)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
