@@ -99,8 +99,12 @@ $(function(){
 		}
 	})
 
-    mapInit();
+  mapInit();
+
+    
 })
+
+Splitting();
 
 var map1, map2;
 
@@ -161,3 +165,39 @@ function mapInit() {
 
 
 }
+
+
+window.onload = function(){  
+    gsap.registerPlugin(CustomEase);
+
+    const customEaseIn = CustomEase.create('custom-ease-in', '0.52, 0.00, 0.48, 1.00');
+    const fourtyFrames = 1.3333333;
+    const fiftyFrames = 1.66666;
+    const twoFrames = 0.666666;
+    const fourFrames = 0.133333;
+    const sixFrames = 0.2;
+
+    const b1 = document.querySelector('#b1 b');
+    const b2 = document.querySelector('#b2 b');
+    const b3 = document.querySelector('#b3 b');
+    const span1 = document.querySelector('#span1 span');
+    const span2 = document.querySelector('#span2 span');
+    const span3 = document.querySelector('#span3 span');
+
+    const showElements = () => {
+      const timeline = gsap.timeline();
+      timeline
+            .fromTo(b1, {x: '10rem'}, { x: '0rem', duration: twoFrames, ease: customEaseIn}, 0)
+            .fromTo(b2, {x: '21rem'}, { x: '0rem', duration: twoFrames, ease: customEaseIn}, 0)
+            .fromTo(span3, {x: '-11rem'}, { x: '0rem', duration: twoFrames, ease: customEaseIn}, twoFrames)
+            .fromTo(span1, {x: '-35rem'}, { x: '0rem', duration: twoFrames, ease: customEaseIn}, twoFrames)
+            .fromTo(span2, {x: '-22rem'}, { x: '0rem', duration: twoFrames, ease: customEaseIn}, twoFrames)
+            .fromTo(b3, {x: '22rem'}, { x: '0rem', duration: twoFrames, ease: customEaseIn}, 0)
+
+      return timeline;
+    }
+
+    showElements();
+}
+
+
