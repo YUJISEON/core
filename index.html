@@ -7,12 +7,13 @@
     <title>Document</title>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="/js/main.js"></script>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <script src="js/main.js"></script>
+    <script src="js/sub.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- swiper -->        
-    <script type="text/javascript" src="/js/swiper.min.js"></script>
-    <link rel="stylesheet" href="/css/swiper.css"/>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.css"/>
     <!-- animation -->
     <script src="https://cdn.jsdelivr.net/npm/@cycjimmy/swiper-animation@6/dist/swiper-animation.umd.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -23,144 +24,183 @@
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-    <!-- map -->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f7cba2163c2ad594c6d3d5fcc2d2e251"></script>
 </head>
 <body>
-    <div id="main">
-        <div class="section section0 main_visual">
+    <div id="sub" class="about">
+        <div class="sub_visual">         
             <div class="visual_wrap">
-                <div class="swiper-container swiper mainSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">	                               
-                            <div class="back_img move" style="background-image:url('/img/main_visual_img1.jpg');" data-swiper-animation="animate__fadeIn" data-duration=".5s"></div>	
-                        </div>	
-                        <div class="swiper-slide">	                               
-                            <div class="back_img move" style="background-image:url('/img/main_visual_img2.jpg');" data-swiper-animation="animate__fadeIn" data-duration=".5s"></div>	                               
-                        </div>	
-                        <div class="swiper-slide">	                               
-                            <div class="back_img move" style="background-image:url('/img/main_visual_img3.jpg');" data-swiper-animation="animate__fadeIn" data-duration=".5s"></div>	                                                    
-                        </div>	
-                    </div>    
+                <div class="back_img pc ani_bg" style="background-image:url(img/about_visual_bg.jpg);">
+                    <img src="img/sub_visual_bg.jpg" class="basic_img">
+                </div>    
+                <div class="tit_wrap ani_items">
+                    <div class="size">
+                        <div class="inner tb"> 
+                            <div class="tbc">
+                                <h2 class="gd-dot">회사소개</h2>
+                                <p class="menus">
+                                    <a href="/"><span>Home</span></a>                    
+                                    <a href="/about"><span>About</span></a>
+                                </p>
+                            </div>
+                        </div>  
+                    </div>
                 </div>
-                <div class="txt_ab fBox">	                    
-                    <div class="swiper-container swiper txtSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">	     
-                                <div class="txt_box">
-                                    <p data-swiper-animation="animate__fadeInUp" data-duration="1s" data-delay="1s">제목1</p>
-                                    <span data-swiper-animation="animate__fadeInUp" data-duration="1s" data-delay="1.2s">설명1</span>
-                                </div>
-                            </div>	
-                            <div class="swiper-slide">	                               
-                                <div class="txt_box">
-                                    <p data-swiper-animation="animate__fadeInUp" data-duration="1s" data-delay="1s">제목2</b></p>
-                                    <span data-swiper-animation="animate__fadeInUp" data-duration="1s" data-delay="1.2s">설명2</span>
-                                </div>   	                               
-                            </div>	
-                            <div class="swiper-slide">	                               
-                                <div class="txt_box">
-                                    <p data-swiper-animation="animate__fadeInUp" data-duration="1s" data-delay="1s">제목3</b></p>
-                                    <span data-swiper-animation="animate__fadeInUp" data-duration="1s" data-delay="1.2s">설명3</span>
-                                </div>   	                               
-                            </div>		
-                        </div>
-                        <div class="control flex_box">
-                            <div class="swiper-pagination"></div>				                     
-                            <div class="arrow_box">
-                                <div class="page_box">
-                                    <span class="current_num">1</span>
-                                    <span class="total_num">/ 3</span>
-                                </div>
-                                <div class="arr visual_prev"><img src="/img/icon_visual_prev.svg" width="11"></div>
-                                    <div class="arr visual_next"><img src="/img/icon_visual_next.svg" width="11"></div>	
-                                </div>
-                            </div>     
-                        </div>
-                    </div>             
+            </div>	                
+        </div>
+        <div class="page_slogan">
+            <div class="size">
+                <div class="inner ani_items">
+                    <h3 class=""><b>ABCD</b>stone,</h3><h3>co<b>ABCD</b>one,</h3> <h3>corest<b>ABCD!</b></h3>
+                    <div class="title-row title-row-1 flex_box con_center">
+                        <div class="title-charts-cont fBox" id="b1"><b>핵심인</b></div>
+                        <div class="title-charts-cont fBox" id="span1"><span>기술과 사람을 기반으로, </span></div>
+                        <div class="title-charts-cont fBox" id="b2"><b>워라밸을 추구</b></div>
+                        <div class="title-charts-cont fBox" id="span2"><span>하며, 하나가 된 </span></div>
+                        <div class="title-charts-cont fBox" id="b3"><b>우리는 ABCD</b></div>
+                        <div class="title-charts-cont fBox" id="span3"><span>입니다.</span></div>
+                    </div>
                 </div>
             </div>
-        </div>        
-    </div>
-    <div id="sub" class="about">
-        <div id="location" class="section section5">
+        </div>
+        <div class="section section1">
             <div class="size">
                 <div class="inner">
                     <div class="tit_wrap">
-                        <h4><b>Location</b></h4>
-                        <span>본사와 자회사의 위치입니다.</span>
+                        <h4 class="ani_items"><b><em class="ani_tit"></em>Vision</b></h4>
+                        <span class="ani_items">ABC의 단 하나의 가치, Three 1</span>
+                    </div>
+                    <div class="con_wrap ani_items">
+                        section1
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section2 each_tiem">
+            <div class="size">
+                <div class="inner">
+                    <div class="tit_wrap">
+                        <h4 class="ani_items"><b><em class="ani_tit"></em>Welfare</b> System</h4>
+                        <span class="ani_items">ABC의 단 하나의 가치, Three 1</span>
                     </div>
                     <div class="con_wrap">
-                        <div class="tab_wrap">
+                        <ul>
+                            <li class="on ani_items">리스트1</li>
+                            <li class="ani_items">리스트2</li>
+                            <li class="ani_items">리스트3</li>
+                            <li class="ani_items">리스트4</li>
+                            <li class="ani_items">리스트5</li>
+                        </ul>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section3 each_tiem">
+            <div class="size">
+                <div class="inner">
+                    <div class="tit_wrap">
+                        <h4 class="ani_items"><b><em class="ani_tit"></em>History</b></h4>
+                        <span class="ani_items">ABC의 단 하나의 가치, Three 1</span>
+                    </div>
+                    <div class="con_wrap">
+                        <div class="tab_wrap ani_items">
                             <ul>
-                                <li class="on"><a href="javascript:;" onclick="mapInit(0);">서울</a></li>
-                                <li><a href="javascript:;" onclick="mapInit(1);">대전</a></li>
+                                <li class="on"><a href="javascript:;">서울</a></li>
+                                <li class=""><a href="javascript:;">대전</a></li>
                             </ul>
                         </div>
                         <div class="tab_con">
-                            <ul class="address">
-                                <li class="on">
-                                    <div class="box">
-                                        <div class="info">
-                                            <h3>오시는 길1</h3>
-                                            <p>서울특별시 송파구 법원로 127</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="box">
-                                        <div class="info">
-                                            <h3>오시는 길2</h3>
-                                            <p>대전광역시 유성구 가정로 218</p>
-                                        </div>
-                                    </div>
-                                </li> 
-                            </ul>
-                            <ul class="map_area">
-                                <li class="on">
-                                    <div class="map_wrap">
-                                        <img src="/img/about_sec5_mapBg.jpg" class="basic_img">
-                                        <div id="map1" class="map"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="map_wrap">
-                                        <img src="/img/about_sec5_mapBg.jpg" class="basic_img">
-                                        <div id="map2" class="map"> </div>
-                                    </div>
-                                </li> 
+                            <ul>
+                                <li class="ani_items">리스트1</li>
+                                <li class="ani_items">리스트2</li>
+                                <li class="ani_items">리스트3</li>
+                                <li class="ani_items">리스트4</li>
+                                <li class="ani_items">리스트5</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- location 끝 -->
-    </div>
-    <div class="page_slogan">
-        <div class="size">
-            <div class="inner">
-                <h3><b>ABCD</b>stone,</h3><h3>co<b>ABCD</b>one,</h3> <h3>corest<b>ABCD!</b></h3>
-                <div class="title-row title-row-1 flex_box con_center">
-                    <div class="title-charts-cont fBox" id="b1"><b>핵심인</b></div>
-                    <div class="title-charts-cont fBox" id="span1"><span>기술과 사람을 기반으로, </span></div>
-                    <div class="title-charts-cont fBox" id="b2"><b>워라밸을 추구</b></div>
-                    <div class="title-charts-cont fBox" id="span2"><span>하며, 하나가 된 </span></div>
-                    <div class="title-charts-cont fBox" id="b3"><b>우리는 ABCD</b></div>
-                    <div class="title-charts-cont fBox" id="span3"><span>입니다.</span></div>
+        <div class="section section4 each_tiem">
+            <div class="size">
+                <div class="inner">
+                    <div class="tit_wrap">
+                        <h4 class="ani_items"><b><em class="ani_tit"></em>Certificate</b></h4>
+                        <span class="ani_items">ABC의 단 하나의 가치, Three 1</span>
+                    </div>
+                    <div class="con_wrap">
+                        <div class="tab_wrap ani_items">
+                            <ul>
+                                <li class="on"><a href="javascript:;">서울</a></li>
+                                <li class=""><a href="javascript:;">대전</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab_con">
+                            <ul>
+                                <li class="ani_items">리스트1</li>
+                                <li class="ani_items">리스트2</li>
+                                <li class="ani_items">리스트3</li>
+                                <li class="ani_items">리스트4</li>
+                                <li class="ani_items">리스트5</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="page_slogan">
-        <div class="size">
-            <div class="inner">
-                <h3><b data-splitting="">ABCD</b>stone,</h3><h3>co<b data-splitting="">ABCD</b>one,</h3> <h3 data-splitting="">corest<b>ABCD!</b></h3>
-                <p><b>핵심인</b> 기술과 사람을 기반으로, <b>워라밸을 추구</b>하며, 하나가 된 <b>우리는 ABCD</b>입니다.</p>
+        <div class="section section5 each_tiem">
+            <div class="size">
+                <div class="inner">
+                    <div class="tit_wrap">
+                        <h4 class="ani_items"><b><em class="ani_tit"></em>Location</b></h4>
+                        <span class="ani_items">ABC의 단 하나의 가치, Three 1</span>
+                    </div>
+                    <div class="con_wrap">
+                        <div class="tab_wrap ani_items">
+                            <ul>
+                                <li class="on"><a href="javascript:;">서울</a></li>
+                                <li class=""><a href="javascript:;">대전</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab_con">
+                            <ul>
+                                <li class="ani_items">리스트1</li>
+                                <li class="ani_items">리스트2</li>
+                                <li class="ani_items">리스트3</li>
+                                <li class="ani_items">리스트4</li>
+                                <li class="ani_items">리스트5</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div data-splitting>ABC</div>
+    </div>    
+    <div class="contact_wrap clear">
+        <div class="size le pc">	               
+            <div class="inner fBox con_start">	
+                <div class="con_area">                        	
+                    <div class="top">
+                        <h3 class="ani_items"><b class="big"><em class="ani_tit"></em>Contact</b></h3>
+                        <p class="ani_items">코어스톤과 상의하세요. <br>최고의 IT 전문가가 도와드리겠습니다.</p>
+                    </div>			                            
+                    <div class="btm">
+                        <div class="con_wrap">
+                            <ul>
+                                <li class="ani_items">리스트1</li>
+                                <li class="ani_items">리스트2</li>
+                                <li class="ani_items">리스트3</li>
+                                <li class="ani_items">리스트4</li>
+                                <li class="ani_items">리스트5</li>
+                            </ul>     
+                        </div>
+                    </div>	
+                </div>                       
+            </div>
+        </div>
+        <div class="size ri ani_items">	     
+            문의하기
+        </div>                        
     </div>
-
 </body>
 </html>

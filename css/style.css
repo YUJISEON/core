@@ -79,7 +79,7 @@ em.icon { font-size: 0; text-indent: -999999px; display: inline-block; }
 
 
 .tab_con { position: relative }
-.tab_con > ul > li { display: none; position: relative }
+.tab_con > ul > li { /*display: none;*/ position: relative }
 .tab_con > ul > li.on { display: block }
 
 
@@ -114,6 +114,19 @@ em.icon { font-size: 0; text-indent: -999999px; display: inline-block; }
 .arrow_box .arr { cursor: pointer; display: inline-block; width: 55px; height: 55px; line-height: 55px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 50%; box-sizing: border-box; }
 .arrow_box .arr + .arr { margin-left: 10px; }
 
+/* ==================================================
+	sub_visual
+================================================== */
+
+.sub_visual { position: relative; height: auto; }
+.sub_visual .tit_wrap { position: absolute;  width: 100%; height: 100%; top: 0;  left: 0; }
+.sub_visual .tit_wrap .size {  height: 100%; }
+.sub_visual .tit_wrap h2 { display: inline-block; font-size: 12.0rem; font-weight: 700; letter-spacing: -2.5px; line-height: 1; color: #fff; position: relative }
+.sub_visual .tit_wrap h2:after {  content: ''; display: block; clear: both;  width: 15px; height: 15px; position: absolute;   right: -15px;  bottom: 10px;  border-radius: 50%; background: #fff; }
+.sub_visual .tit_wrap .menus { margin-top: 40px}
+.sub_visual .tit_wrap .menus a { display: inline-block; position: relative; font-size : 2.6rem; font-weight: 300; color: rgba(255, 255, 255, 0.5); text-transform: uppercase;}
+.sub_visual .tit_wrap .menus a + a { margin-left: 30px;}
+.sub_visual .tit_wrap .menus a + a::before { content: ''; display: block; clear: both; width: 13px; border-top: 2px solid rgba(255, 255, 255, 0.5); position: absolute;  left: -24px; top: 50%;  margin-top: -1px;}
 
 /* ==================================================
    slogan
@@ -151,7 +164,7 @@ em.icon { font-size: 0; text-indent: -999999px; display: inline-block; }
 
 #sub .size { max-width: 1780px}
 #sub .con_wrap { margin-top: 75px;  }
-#sub .section { padding-top: 250px;}
+#sub .section { padding-top: 250px; min-height: 500PX;}
 #sub .section.section1 { padding-top: 200px; }
 #sub .section:last-child { padding-bottom: 140px; }
 #sub .sub_section { margin-top: 140px}
@@ -163,9 +176,11 @@ em.icon { font-size: 0; text-indent: -999999px; display: inline-block; }
 .tit_wrap h4 { font-size: 4.0rem; font-weight: 900; line-height: 100px; position: relative; text-transform: uppercase; letter-spacing: -2.5px;}
 .tit_wrap h4:before { content: ''; display: block; clear: both; width: 100px; border-top: 5px solid #020617; position: absolute; left: 0;  }
 .tit_wrap h4 b { position: relative; font-weight: 900; z-index: 1;  }
-.tit_wrap h4 b:before { content: ''; display: block; clear: both; width: 88.5%; height: 20px; background: #00f3a6; position: absolute; left: 0; bottom: 0px;  z-index: -1; }
-.section.bg_green .tit_wrap h4 b:before {background: #fff;  }
-#sub .tit_wrap h4 b:before { width: 95%; }
+
+/**/
+.tit_wrap h4 b em.ani_tit { content: ''; display: block; clear: both; width: 88.5%; height: 20px; background: #00f3a6; position: absolute; left: 0; bottom: 0px;  z-index: -1; }
+.section.bg_green .tit_wrap h4 em.ani_tit {background: #fff;  }
+#sub .tit_wrap h4 em.ani_tit { width: 95%; }
 
 .tit_wrap h5 { font-size: 3.0rem; font-weight: 900; line-height: 70px; position: relative; text-transform: uppercase; letter-spacing: -2.5px; }
 .tit_wrap span { font-size: 2.4rem; font-weight: 300; }
@@ -218,6 +233,32 @@ em.icon { font-size: 0; text-indent: -999999px; display: inline-block; }
 #sub.about .section5 .address .info p {  font-size: 2.2rem; font-weight: 300; line-height: 38px }
 #sub.about .section5 .map_area { margin-top: 40px; position: relative; }
 #sub.about .section5 .map_area .map { width: 2200px; height: 600px; border-radius: 30px; position: absolute; left: 0; top: 0; background: black }
+
+
+.contact_wrap { height: 100vh; }
+.contact_wrap .inner {  height: 100%; }
+.contact_wrap .top { color : #fff }
+.contact_wrap .top h3 { font-size: 10.0rem; line-height: 100px; font-weight: 100; font-variation-settings: 'wght' 100; letter-spacing: -2.5px; }
+.contact_wrap .top h3 b { font-weight: 900; font-variation-settings: 'wght' 900; position: relative; z-index: 1; }
+.contact_wrap .top h3 b em { content: ''; display: block; clear: both; width: 100%; max-width: 220px; height: 80px; background: #00f3a6; position: absolute; top: 0; left: -15px; z-index: -1; }
+.contact_wrap .top h3 b.big em {  max-width: 233px; }
+.contact_wrap .top p { color: #ececec; margin-top: 40px; font-size: 2.8rem; line-height: 40px; font-weight: 300; font-variation-settings: 'wght' 300; } 
+.contact_wrap .inner > .btm { margin-top: 85px; overflow: visible; }
+
+.contact_wrap .size { float: left; width: 50%; height: 100%; }
+.contact_wrap .size.le { background: #020617 }
+#sub ~ .contact_wrap .size.ri { background: #f9f9f9 }
+#sub ~ .contact_wrap .size.ri .bbs { z-index: 10}
+.contact_wrap .inner { height: 100%; }
+.contact_wrap .con_area { width: 100%; max-width: 640px }
+.contact_wrap .down_btn { margin-top: 75px; display: inline-block; width: 285px; height: 80px; line-height: 80px; padding: 0 40px;     box-sizing: border-box; background: #3062d1; font-size: 2.4rem; font-weight: 600; font-variation-settings: 'wght' 600; letter-spacing: -2px; color: #fff !important; border-radius: 10px; }
+.contact_wrap .down_btn:hover {  box-shadow: rgba(0,0,0,0.5) 5px 5px 15px;  }
+.contact_wrap .down_btn span { display: inline-block; width: 100%; box-sizing: border-box; padding-right: 30px; background: url('/img/icon_down.svg') no-repeat center right; background-size: 21px;   }
+.contact_wrap .info { margin-top: 150px }
+.contact_wrap .info li { float: left; width: 50%; box-sizing: border-box; margin-top: 70px; position: relative; padding-left: 20px; font-size: 2.4rem; line-height: 34px;  }
+.contact_wrap .info li:before { content: ''; display: block; clear: both; height: 100%; border-left: 2px solid rgba(255, 255, 255, 0.3); position: absolute; left: 0; top: 0; }
+.contact_wrap .info li b { color: #fff; font-weight: 700; font-variation-settings: 'wght' 700; }
+.contact_wrap .info li span { color: rgba(255, 255, 255, 0.7); font-weight: 300; font-variation-settings: 'wght' 300; }
 
 /* ==================================================
 	skip
